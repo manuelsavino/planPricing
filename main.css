@@ -1,0 +1,122 @@
+body{
+    /* background: linear-gradient(to right,#524763, #373143) */
+    background: #D3CCE3;
+}
+.container{
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.prices{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+grid-gap: 2em;
+padding: 2em;
+}
+
+.priceBox{
+background: linear-gradient(#8E2DE2, #4A00E0 ) ;
+min-height: 500px;
+text-align: center;
+box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+transition: all .1s ease-in-out; 
+border-radius: .3rem;
+padding: 1rem;
+display: grid;
+justify-content: space-evenly;
+}
+
+.priceBox h2{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.priceBox ul{
+    text-align: left;
+}
+
+.priceBox ul li, p, h3, h4{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.priceBox p{
+    margin-bottom: 2rem;
+}
+
+.priceBox h3{
+    margin: 0;
+}
+
+.priceBox h4{
+    font-size: 1.2rem;
+}
+
+.priceBox:nth-child(2n)
+{
+    position: relative;
+}
+
+.preferred{
+    background-color: gold;
+    color: white;
+    padding: .3rem 2rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: -1rem;
+    left: -1.0rem;
+    border-radius: .2rem;
+    overflow: hidden;
+    font-family: 'Coming Soon', cursive;
+}
+
+.button{
+background: #4a148c; 
+padding: .5rem;
+text-decoration: none;
+color: white;
+font-family: 'Open Sans', sans-serif;
+border-radius: .5rem;
+box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+}
+
+.button:hover{
+background: linear-gradient(#2e1c44, #1b0338);    
+}
+
+
+.priceBox:hover { 
+transform: scale(1.05); 
+box-shadow: 7px 7px 10px rgba(60, 60, 60, 0.2);
+}
+
+.largeIcon{
+border-radius: 50%;
+background: linear-gradient(#bc4e9c, #f80759);   
+box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+padding: 2rem;
+margin-top: 1rem;
+color: white;
+transition: all 2s ease-in-out; 
+transform: rotate(0deg);
+transition: transform .0001s;
+
+}
+
+.priceBox:hover > span .fas{
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+}
+
+.smallIcon{
+border-radius: 50%;
+background: white;  
+box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+padding: .2rem;
+margin-top: 1rem;
+color: black;
+}
