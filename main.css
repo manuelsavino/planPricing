@@ -1,122 +1,127 @@
-body{
-    /* background: linear-gradient(to right,#524763, #373143) */
-    background: #D3CCE3;
+body {
+  /* background: linear-gradient(to right,#524763, #373143) */
+  background: #ccc;
 }
-.container{
-width: 80%;
-margin-left: auto;
-margin-right: auto;
-}
-
-.prices{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-grid-gap: 2em;
-padding: 2em;
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.priceBox{
-background: linear-gradient(#8E2DE2, #4A00E0 ) ;
-min-height: 500px;
-text-align: center;
-box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
-transition: all .1s ease-in-out; 
-border-radius: .3rem;
-padding: 1rem;
-display: grid;
-justify-content: space-evenly;
+.prices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 5em;
+  padding: 5em;
 }
 
-.priceBox h2{
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    color: white;
+.priceBox {
+  background: linear-gradient(#8e2de2, #4a00e0);
+  min-height: 500px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+  transition: all 0.1s ease-in-out;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  display: grid;
+  justify-content: space-evenly;
 }
 
-.priceBox ul{
-    text-align: left;
+.priceBox h2 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: white;
 }
 
-.priceBox ul li, p, h3, h4{
-    color: white;
-    font-family: 'Open Sans', sans-serif;
+.priceBox ul {
+  text-align: left;
 }
 
-.priceBox p{
-    margin-bottom: 2rem;
+.priceBox ul li,
+p,
+h3,
+h4 {
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
 
-.priceBox h3{
-    margin: 0;
+.priceBox p {
+  margin-bottom: 2rem;
 }
 
-.priceBox h4{
-    font-size: 1.2rem;
+.priceBox h3 {
+  margin: 0;
 }
 
-.priceBox:nth-child(2n)
-{
-    position: relative;
+.priceBox h4 {
+  font-size: 1.2rem;
 }
 
-.preferred{
-    background-color: gold;
-    color: white;
-    padding: .3rem 2rem;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    transform: rotate(-25deg);
-    position: absolute;
-    top: -1rem;
-    left: -1.0rem;
-    border-radius: .2rem;
-    overflow: hidden;
-    font-family: 'Coming Soon', cursive;
+.priceBox:nth-child(2n) {
+  position: relative;
 }
 
-.button{
-background: #4a148c; 
-padding: .5rem;
-text-decoration: none;
-color: white;
-font-family: 'Open Sans', sans-serif;
-border-radius: .5rem;
-box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+.preferred {
+  background-color: gold;
+  color: white;
+  padding: 0.3rem 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: -1rem;
+  left: -0.05rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  font-family: "Coming Soon", cursive;
+  transition: all 0.5s ease-in-out;
 }
 
-.button:hover{
-background: linear-gradient(#2e1c44, #1b0338);    
+.button {
+  background: #4a148c;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
 }
 
-
-.priceBox:hover { 
-transform: scale(1.05); 
-box-shadow: 7px 7px 10px rgba(60, 60, 60, 0.2);
+.button:hover {
+  background: linear-gradient(#2e1c44, #1b0338);
 }
 
-.largeIcon{
-border-radius: 50%;
-background: linear-gradient(#bc4e9c, #f80759);   
-box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
-padding: 2rem;
-margin-top: 1rem;
-color: white;
-transition: all 2s ease-in-out; 
-transform: rotate(0deg);
-transition: transform .0001s;
-
+.priceBox:hover {
+  transform: scale(1.05);
+  box-shadow: 7px 7px 10px rgba(60, 60, 60, 0.2);
 }
 
-.priceBox:hover > span .fas{
-    transform: rotate(360deg);
-    transition: transform 0.5s;
+.largeIcon {
+  border-radius: 50%;
+  background: linear-gradient(#bc4e9c, #f80759);
+  box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+  padding: 2rem;
+  margin-top: 1rem;
+  color: white;
+  transition: all 2s ease-in-out;
+  transform: rotate(0deg);
+  transition: transform 0.0001s;
 }
 
-.smallIcon{
-border-radius: 50%;
-background: white;  
-box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
-padding: .2rem;
-margin-top: 1rem;
-color: black;
+.priceBox:hover > span .fas {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+
+.priceBox:hover > .preferred {
+  transform: scale(1.2) rotate(-20deg);
+}
+
+.smallIcon {
+  border-radius: 50%;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.2);
+  padding: 0.2rem;
+  margin-top: 1rem;
+  color: black;
 }
