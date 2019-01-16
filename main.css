@@ -1,11 +1,19 @@
-body {
-  /* background: linear-gradient(to right,#524763, #373143) */
-  background: #ccc;
+html, body{
+margin:0;
+   padding:0;
+   height:100%;
 }
+
+body {
+  background: linear-gradient(to right bottom, #2d2b3d, #151829);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .container {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  min-height:100%;
+  position: relative;
 }
 
 .prices {
@@ -13,7 +21,22 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 5em;
   padding: 5em;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20%;
 }
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+      .prices {
+  padding-bottom: 60rem;
+}
+
+}
+
 
 .priceBox {
   background: linear-gradient(#8e2de2, #4a00e0);
@@ -61,6 +84,17 @@ h4 {
   position: relative;
 }
 
+.priceBox:hover > span .fas {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+
+.priceBox:hover > .preferred {
+  transform: scale(1.09) rotate(-20deg);
+}
+
+
+
 .preferred {
   background-color: gold;
   color: white;
@@ -73,8 +107,8 @@ h4 {
   left: -0.05rem;
   border-radius: 0.2rem;
   overflow: hidden;
-  font-family: "Coming Soon", cursive;
-  transition: all 0.5s ease-in-out;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease-in-out;
 }
 
 .button {
@@ -108,15 +142,6 @@ h4 {
   transition: transform 0.0001s;
 }
 
-.priceBox:hover > span .fas {
-  transform: rotate(360deg);
-  transition: transform 0.5s;
-}
-
-.priceBox:hover > .preferred {
-  transform: scale(1.2) rotate(-20deg);
-}
-
 .smallIcon {
   border-radius: 50%;
   background: white;
@@ -125,3 +150,74 @@ h4 {
   margin-top: 1rem;
   color: black;
 }
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 30%;
+    background-color: #4a148c;
+    color: whitesmoke;
+}
+
+.footerInner{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.footerInner ul{
+    list-style: none;
+    padding: 0% 20%;
+    /* margin: 0; */
+}
+
+.footerInner ul li{
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 15px;
+}
+
+.footerInner ul li:hover{
+    text-decoration: underline;
+}
+
+.footerInner ul li:first-child{
+    text-decoration: none;    
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #C54492;
+    padding-bottom: 15px;
+}
+
+
+.footer hr {
+    border-top: .005rem solid #603891;
+}
+
+.footerInnerBottom{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footerInnerBottom ul li{
+    list-style: none;
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    padding: .7rem .9rem;
+} 
+
+.footerInnerBottom:last-child{
+    background: #C54492;
+}
+
+.footerInnerBottom ul li:first-child, .footerInnerBottom ul li:last-child{
+    padding: .7rem 1.1rem;   
+} 
