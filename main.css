@@ -15,26 +15,19 @@ body {
   min-height:100%;
   position: relative;
 }
+.body{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 25%;
+}
 
 .prices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 5em;
-  padding: 5em;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20%;
-}
-
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) {
-      .prices {
-  padding-bottom: 60rem;
-}
-
+  grid-gap: 4rem;
+  padding: 2rem 1rem;
+  
 }
 
 
@@ -50,7 +43,7 @@ body {
   justify-content: space-evenly;
 }
 
-.priceBox h2 {
+.body h2 {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   color: white;
@@ -69,7 +62,7 @@ h4 {
 }
 
 .priceBox p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .priceBox h3 {
@@ -89,12 +82,9 @@ h4 {
   transition: transform 0.5s;
 }
 
-.priceBox:hover > .preferred {
-  transform: scale(1.09) rotate(-20deg);
-}
 
 
-
+/* Best Value Banner Start*/
 .preferred {
   background-color: gold;
   color: white;
@@ -111,8 +101,15 @@ h4 {
   transition: all 0.3s ease-in-out;
 }
 
+.priceBox:hover > .preferred {
+  transform: scale(1.09) rotate(-20deg);
+}
+/* Best Value Banner End*/
+
+
+
 .button {
-  background: #4a148c;
+  background: #1D023D;
   padding: 0.5rem;
   text-decoration: none;
   color: white;
@@ -152,12 +149,14 @@ h4 {
 }
 
 
+
+/* Footer Start ----------------------------------------------- */
 .footer{
     position: absolute;
     bottom: 0;
     width: 100%;
     min-height: 30%;
-    background-color: #4a148c;
+    background-color: #1D023D;
     color: whitesmoke;
 }
 
@@ -174,11 +173,13 @@ h4 {
     list-style: none;
     padding: 0% 20%;
     /* margin: 0; */
+    
 }
 
 .footerInner ul li{
     font-family: "Roboto", sans-serif;
     padding-bottom: 15px;
+    
 }
 
 .footerInner ul li:hover{
@@ -193,12 +194,12 @@ h4 {
     padding-bottom: 15px;
 }
 
-
 .footer hr {
     border-top: .005rem solid #603891;
 }
 
 .footerInnerBottom{
+  display: none;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 2%;
@@ -212,12 +213,85 @@ h4 {
     display: inline;
     font-family: "Roboto", sans-serif;
     padding: .7rem .9rem;
+    text-align: right;
 } 
-
-.footerInnerBottom:last-child{
-    background: #C54492;
-}
 
 .footerInnerBottom ul li:first-child, .footerInnerBottom ul li:last-child{
     padding: .7rem 1.1rem;   
 } 
+/* Footer End ----------------------------------------------------- */
+
+/* Navbar Start -------------------------------------------------- */
+
+.nav{
+  width: 100%;
+  background: #4a148c;
+  min-height: 3rem;
+}
+
+.navInner{
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-evenly;
+}
+
+.logo{
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navInner ul{
+  list-style: none;
+  text-align: right;
+  
+}
+
+.navInner ul li{
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  line-height: 40px;
+}
+
+.navInner ul  :not(:last-child)
+{
+  margin-right: 1rem;
+}
+/* Navbar End ---------------------------------------------------- */
+
+
+
+
+
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 600px) {
+    .prices {
+      padding-bottom: 20rem;
+    }
+
+    .footer{
+      position: absolute;
+      bottom: 0;
+      min-height: 10%;
+    }
+
+    .footerInner{
+      display: none;
+    }
+
+    .footerInnerBottom{
+    width: 90%;
+    }
+
+    .footerInnerBottom ul li{
+
+      display: block;
+    }
+    
+    .d-none{
+      display: none;
+    }
+  }
